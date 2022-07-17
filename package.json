@@ -4,6 +4,7 @@
 	"description": "Convert Java.toString to JSON object",
 	"version": "0.0.1",
 	"publisher": "bryancondor",
+	"icon": "icon.png",
 	"engines": {
 		"vscode": "^1.69.0"
 	},
