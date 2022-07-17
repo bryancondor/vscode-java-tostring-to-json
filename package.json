@@ -1,23 +1,33 @@
 {
-	"name": "hellomyextension",
-	"displayName": "HelloMyExtension",
-	"description": "my first vscode extension",
+	"name": "javatostring-to-json",
+	"displayName": "Java.toString to JSON",
+	"description": "Convert Java.toString to JSON object",
 	"version": "0.0.1",
+	"publisher": "bryancondor",
 	"engines": {
 		"vscode": "^1.69.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bryancondor/vscode-java-tostring-to-json.git"
+	},
+	"homepage": "https://github.com/bryancondor/vscode-java-tostring-to-json",
+	"bugs": {
+		"url": "https://github.com/bryancondor/vscode-java-tostring-to-json/issues"
+	},
 	"activationEvents": [
-		"onCommand:hellomyextension.helloWorld"
+		"onCommand:javatostringToJson.fromSelection"
 	],
+	"author": "https://github.com/bryancondor",
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "hellomyextension.helloWorld",
-				"title": "Hello World"
+				"command": "javatostringToJson.fromSelection",
+				"title": "Java.toString to JSON: Converts Java.toString to JSON object"
 			}
 		]
 	},
