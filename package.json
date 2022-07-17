@@ -30,6 +30,13 @@
 				"command": "javatostringToJson.fromSelection",
 				"title": "Java.toString to JSON: Converts Java.toString to JSON object"
 			}
+		],
+		"keybindings": [
+			{
+				"command": "javatostringToJson.fromSelection",
+				"key": "ctrl+shift+d",
+				"mac": "cmd+shift+d"
+			}
 		]
 	},
 	"scripts": {

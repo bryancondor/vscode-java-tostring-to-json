@@ -1,19 +1,20 @@
-# Java.toString to JSON Object
+# Java.toString to JSON Object 🚀
 
 This is an extension for Visual Studio Code that allows you to convert Java.toString to JSON Object.
 
-## Usage
+## Usage 
+### Use Command
 
-<!-- ### Keybindings -->
+**Java.toString to JSON**: Converts Java.toString to JSON object
 
-<!-- - `Alt+Z` Px to rem, and rem to px. Converts selected text from px to rem, and rem to px.
-- `Alt+S` Asks for a new px per rem value.
+<!-- ![](./images/readme/vscode-javatostring-to-json--from-selection.gif) -->
 
-![](./imgs/alt_z.gif) -->
 
-### Commands
+### Use Keybinding
+`ctrl+shift+d` to Window and Linux, `cmd+shift+d` MacOS
 
-- Java.toString to JSON: Converts Java.toString to JSON object
+![](./images/readme/vscode-javatostring-to-json--from-selection.gif)
+
 
 <!-- ## Known Issues -->
 
