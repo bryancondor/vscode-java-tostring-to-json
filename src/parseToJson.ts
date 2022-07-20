@@ -17,6 +17,6 @@ export const parseToJson = (content: string) => {
 
 const parseArrayOfStrings = (value: string = '') => {
     return value.split(",")
-    .map((value: string) => `"${value}"`)
+    .map((value: string) => `"${value.trimStart().trimEnd()}"`)
     .join(",");
 }; 
