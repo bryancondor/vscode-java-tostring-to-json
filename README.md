@@ -19,9 +19,11 @@ This is an extension for Visual Studio Code that allows you to convert Java.toSt
 <!-- ## Known Issues -->
 
 ## Release Notes
-### 1.0.0
+### 1.0.1
+- Fix to parse array with primitives values
 
-Initial release
+### 1.0.0
+- Initial release
 
 ---
 
@@ -29,7 +31,7 @@ Initial release
 
 Feel free to fork this repository and use it the way you like. If you want to propose a nice new feature, just create a pull request from you forked branch.
 
-
-Author: [@Bryan Condor](https://github.com/bryancondor/vscode-java-tostring-to-json)
-
 **Successes!**
+
+---
+Author: [@BryanCondor](https://github.com/bryancondor)
