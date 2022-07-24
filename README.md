@@ -20,8 +20,11 @@ This is an extension for Visual Studio Code that allows you to convert Java.toSt
 
 ## Release Notes
 
+### 1.0.3
+- Fix when exists elements into primite array
+
 ### 1.0.2
-- array with primitives values, trim spaces from start and end
+- Array with primitives values, trim spaces from start and end
 
 ### 1.0.1
 - Fix to parse array with primitives values
@@ -38,4 +41,5 @@ Feel free to fork this repository and use it the way you like. If you want to pr
 **Successes!**
 
 ---
-Author: [@BryanCondor](https://github.com/bryancondor)
+[GitHub](https://github.com/bryancondor) •
+[Linkedin](https://www.linkedin.com/in/bryancondor/)

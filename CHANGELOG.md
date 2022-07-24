@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.3] - 2022-07-24
+
+### Fixed
+- Fix when exists elements into primite array
 
 ## [1.0.2] - 2022-07-20
 ### Fixed
