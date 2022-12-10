@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.05] - 2022-12-10
+
+### Fixed
+- Fix string array and rollback to the previous shortcut on macos
+
 ## [1.0.4] - 2022-12-10
 
 ### Fixed

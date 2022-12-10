@@ -2,7 +2,7 @@ export const parseToJson = (content: string) => {
     const removeClassNameRegex = new RegExp('[a-zA-Z0-9]+(?={)', 'g');
     const addQuotationMarkToKeys = new RegExp('\\s?(?<=[{\\s])([a-zA-Z0-9]+)=', 'g');
     const addQuotationMarkToValues = new RegExp('(?<=":)([^"\\{\\}]*)(?=[,}])', 'g');
-    const getPrimitivesArrays = new RegExp('(?<=:)("\\[[^\\{\\}]*\\]")', 'g');
+    const getPrimitivesArrays = new RegExp('("\\[[^\\{\\}]*\\]")', 'g');
     const removeQuotationMarkOfBooleanValues = new RegExp('"(true|false)"', 'g');
 
     const contentInJson = content

@@ -2,7 +2,7 @@
 	"name": "javatostring-to-json",
 	"displayName": "Java.toString to JSON",
 	"description": "Convert Java.toString to JSON object",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"publisher": "bryancondor",
 	"icon": "icon.png",
 	"engines": {
@@ -28,14 +28,14 @@
 		"commands": [
 			{
 				"command": "javatostringToJson.fromSelection",
-				"title": "Java.toString to JSON: Converts Java.toString to JSON object"
+				"title": "Java.toString to JSON: Converts Java to JSON object"
 			}
 		],
 		"keybindings": [
 			{
 				"command": "javatostringToJson.fromSelection",
 				"key": "ctrl+shift+d",
-				"mac": "ctrl+j"
+				"mac": "cmd+shift+d"
 			}
 		]
 	},
