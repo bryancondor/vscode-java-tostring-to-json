@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.4] - 2022-12-10
+
+### Fixed
+- Fix when exists an string with square brakets and update the shortcut to macos
+
 ## [1.0.3] - 2022-07-24
 
 ### Fixed

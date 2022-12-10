@@ -20,6 +20,9 @@ This is an extension for Visual Studio Code that allows you to convert Java.toSt
 
 ## Release Notes
 
+### 1.0.4
+- Fix when exists an string with square brakets and update the shortcut to macos
+
 ### 1.0.3
 - Fix when exists elements into primite array
 
