@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.06] - 2023-07-20
+
+### Fixed
+- Fix issue in empty arrays
+
 ## [1.05] - 2022-12-10
 
 ### Fixed
