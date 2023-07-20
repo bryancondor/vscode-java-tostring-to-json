@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.07] - 2023-07-20
+
+### Fixed
+- Changelog updated
+
 ## [1.06] - 2023-07-20
 
 ### Fixed

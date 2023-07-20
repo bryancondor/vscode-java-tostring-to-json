@@ -20,6 +20,9 @@ This is an extension for Visual Studio Code that allows you to convert Java.toSt
 
 ## Release Notes
 
+### 1.0.7
+- Changelog updated
+
 ### 1.0.6
 - Fix issue in empty arrays
 
