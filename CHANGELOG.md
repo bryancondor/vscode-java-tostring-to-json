@@ -1,4 +1,8 @@
 # Change Log
+## [1.08] - 2023-11-17
+
+### Fixed
+- Fix issue in some empty arrays
 
 ## [1.07] - 2023-07-20
 
