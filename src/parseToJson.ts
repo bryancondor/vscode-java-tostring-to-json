@@ -1,45 +1,44 @@
 export const parseToJson = (content: string) => {
-    const removeClassNameRegex = new RegExp('[a-zA-Z0-9]+(?={)', 'g');
-    const addQuotationMarkToKeys = new RegExp('\\s?(?<=[{\\s])([a-zA-Z0-9]+)=', 'g');
-    const addQuotationMarkToValues = new RegExp('(?<=":)([^"\\{\\}]*)(?=[,}])', 'g');
-    const getPrimitivesArrays = new RegExp('("\\[[^\\{\\}\\[]*\\]")', 'g');
-    const removeQuotationMarkOfBooleanValues = new RegExp('"(true|false)"', 'g');
-    const removeQuotationMarkUnnecessaryInEmptyArrays = new RegExp('(?<=":)["]*\\[\\]["]*,["]?(?=")', 'g');
+    const removeClassNameRegex = /[a-zA-Z0-9]+(?={)/g;
+    const addQuotationMarkToKeys = /\s?(?<=[{\s])([a-zA-Z0-9]+)=/g;
+    const addQuotationMarkToValues = /(?<=":)([^"{}]*)(?=[,}])/g;
+    const getPrimitivesArrays = /("\[[^{}[]*\]")/g;
+    const removeQuotationMarkOfBooleanValues = /"(true|false)"/g;
+    const removeQuotationMarkUnnecessaryInEmptyArrays = /(?<=":)"*\[\]"*,?"?(?=")/g;
 
     const contentInJson = content
         .replace(removeClassNameRegex, '')
-        .replace(addQuotationMarkToKeys, (match, group1, offset, string) => `"${group1}":`)
-        .replace(addQuotationMarkToValues, (match, group1, offset, string) => `"${group1}"`)
-        .replace(getPrimitivesArrays, (match, group1, offset, string) => parseArrayOfStrings(group1))
-        .replace(removeQuotationMarkOfBooleanValues, (match, group1, offset, string) => group1)
-        .replace(removeQuotationMarkUnnecessaryInEmptyArrays, (match, group1, offset, string) => removeQuotationMarkUnnecessaryInEmptyArray(match))
+        .replace(addQuotationMarkToKeys, (_, group1) => `"${group1}":`)
+        .replace(addQuotationMarkToValues, (_, group1) => `"${group1}"`)
+        .replace(getPrimitivesArrays, (_, group1) => parseArrayOfStrings(group1))
+        .replace(removeQuotationMarkOfBooleanValues, (_, group1) => group1)
+        .replace(removeQuotationMarkUnnecessaryInEmptyArrays, match => removeQuotationMarkUnnecessaryInEmptyArray(match));
 
     return contentInJson;
 };
 
 const parseArrayOfStrings = (value: string = '') => {
-    const stringToArray = new RegExp('"(.*)"', 'g');
-    const selectValuesFromPrimitiveArray = new RegExp('([^\\[\\],]+)([\\]\\,]?)', 'g');
+    const stringToArray = /"(.*)"/g;
+    const selectValuesFromPrimitiveArray = /([^[\],]+)([\],]?)/g;
 
     const valueParsed = value
-        .replace(stringToArray, (match, group1, offset, string) => group1)
-        .replace(selectValuesFromPrimitiveArray,
-            (match, group1, group2, offset, string) => {
-                const valueSanitized = group1.trim();
+        .replace(stringToArray, (_, group1) => group1)
+        .replace(selectValuesFromPrimitiveArray, (_, group1, group2) => {
+            const valueSanitized = group1.trim();
 
-                if (valueSanitized === '') {
-                    return '';
-                }
+            if (valueSanitized === '') {
+                return '';
+            }
 
-                return `"${valueSanitized}"${group2}`;
-            });
+            return `"${valueSanitized}"${group2}`;
+        });
 
     return valueParsed;
 };
 
 const removeQuotationMarkUnnecessaryInEmptyArray = (match: string = '') => {
     if (match.length <= 3) {
-        return match
+        return match;
     }
 
     return '[],';
