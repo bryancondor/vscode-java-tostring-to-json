@@ -2,7 +2,7 @@
 	"name": "javatostring-to-json",
 	"displayName": "Java.toString to JSON",
 	"description": "Convert Java.toString to JSON object",
-	"version": "1.0.8",
+	"version": "1.1.0",
 	"publisher": "bryancondor",
 	"icon": "icon.png",
 	"engines": {
